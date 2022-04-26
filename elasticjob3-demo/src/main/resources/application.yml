@@ -1,0 +1,14 @@
+server.port: 8089
+
+spring.application.name: elasticjob3-demo
+
+elasticjob:
+  regCenter:
+    serverLists: 127.0.0.1:2181
+    namespace: elasticjob-demo
+  # jobs:
+  #   mySimpleJob:
+  #     elasticJobClass: com.demo.job.elastic3.jobs.MyJob
+  #     cron: 0/20 * * * * ?
+  #     shardingTotalCount: 1
+    

@@ -1,4 +1,4 @@
-package com.jqtin.springdemo.jobs;
+package com.demo.job.elastic3.jobs;
 
 import java.time.LocalDateTime;
 

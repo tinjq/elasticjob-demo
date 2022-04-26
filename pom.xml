@@ -8,51 +8,21 @@
 		<version>2.6.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.jqtin</groupId>
+
+	<groupId>com.demo</groupId>
 	<artifactId>elasticjob-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>elasticjob-demo</name>
-	<description>Demo project for Spring Boot</description>
+
 	<properties>
 		<java.version>1.8</java.version>
-		<elasticjob.version>3.0.1</elasticjob.version>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.28</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.shardingsphere.elasticjob</groupId>
-			<artifactId>elasticjob-lite-spring-boot-starter</artifactId>
-			<version>${elasticjob.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.shardingsphere.elasticjob</groupId>
-			<artifactId>elasticjob-lite-spring-namespace</artifactId>
-			<version>${elasticjob.version}</version>
-		</dependency>
-		
-	</dependencies>
+	
+	<modules>
+		<module>elasticjob2-demo</module>
+		<module>elasticjob3-demo</module>
+	</modules>
 
 	<build>
 		<plugins>
