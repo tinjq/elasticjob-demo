@@ -6,9 +6,28 @@ elasticjob:
   regCenter:
     serverLists: 127.0.0.1:2181
     namespace: elasticjob-demo
-  # jobs:
-  #   mySimpleJob:
-  #     elasticJobClass: com.demo.job.elastic3.jobs.MyJob
-  #     cron: 0/20 * * * * ?
-  #     shardingTotalCount: 1
-    
+    baseSleepTimeMilliseconds: 1000
+    maxSleepTimeMilliseconds: 3000
+    maxRetries: 3
+  jobs:
+    mySimpleJob:
+      elasticJobClass: com.demo.job.elastic3.jobs.MySimpleJob
+      cron: 0/20 * * * * ?
+      shardingTotalCount: 1
+      overwrite: true
+#    oneOffSimpleJobId:
+#      elasticJobClass: com.demo.job.elastic3.jobs.OneOffSimpleJob
+#      shardingTotalCount: 1
+#      overwrite: true
+#      jobBootstrapBeanName: oneOffSimpleJob123
+#      jobErrorHandlerType: EMAIL
+#      props:
+#        email:
+#          host: smtp.163.com
+#          port: 465
+#          username: xxx@163.com
+#          password: xxx
+#          useSsl: true
+#          subject: ElasticJob error message
+#          from: xxx@163.com
+#          to: xxx@qq.com
